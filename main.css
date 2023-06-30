@@ -1,0 +1,104 @@
+/* Reset CSS */
+body,
+header,
+nav,
+ul,
+li,
+p {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+  position: relative;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  color: #fff;
+  background-image: url('新赛季.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#myVideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.wrapper {
+  flex: 1;
+  z-index: 2;
+}
+
+header {
+  background-color: rgba(34, 30, 30, 0.7);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 167px;
+  height: 60px;
+  margin-right: 10px;
+}
+
+nav ul {
+  list-style: none;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  color: #b8b2b2;
+  text-decoration: none;
+  padding: 10px;
+}
+
+section.hero {
+  padding: 100px 0;
+  text-align: center;
+}
+
+section.hero h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+
+.image-overlay img{
+  position: absolute;
+  top: 45%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+
+footer {
+  background-color: transparent;
+  padding: 20px;
+  text-align: center;
+  margin-top: auto;
+}

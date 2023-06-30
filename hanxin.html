@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>韩信</title>
+    <style>
+        .equipment {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .equipment img {
+            width: 100px;
+            height: 100px;
+            margin: 5px;
+        }
+
+        .skills {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .skills img {
+            width: 50px;
+            height: 50px;
+            margin: 5px;
+        }
+
+        .quotes {
+            text-align: center;
+        }
+
+        .skills-table {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .skill {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .skill:hover {
+            background-color: #f0f0f0;
+        }
+
+        .description {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+    </style>
+    <script>
+        function showDescription(skillId) {
+            var description = document.getElementById(skillId);
+            if (description.style.display === "none") {
+                description.style.display = "block";
+            } else {
+                description.style.display = "none";
+            }
+        }
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</head>
+
+<body>
+    <button onclick="goBack()">返回</button>
+    <h2>韩信的推荐出装</h2>
+    <div class="skills-table">
+        <div class="skill" onclick="showDescription('equip1')">
+            <img src="打野刀.webp" alt="equip1">
+            <p>打野刀</p>
+        </div>
+        <div class="skill" onclick="showDescription('equip2')">
+            <img src="攻速鞋.webp" alt="equip2">
+            <p>攻速鞋</p>
+        </div>
+        <div class="skill" onclick="showDescription('equip3')">
+            <img src="黑切.webp" alt="技能3">
+            <p>黑切</p>
+        </div>
+        <div class="skill" onclick="showDescription('equip4')">
+            <img src="无尽.webp" alt="equip3">
+            <p>无尽</p>
+        </div>
+        <div class="skill" onclick="showDescription('equip5')">
+            <img src="宗师.webp" alt="equip5">
+            <p>宗师</p>
+        </div>
+        <div class="skill" onclick="showDescription('equip6')">
+            <img src="泣血.webp" alt="equip6">
+            <p>泣血</p>
+        </div>
+    </div>
+
+    <div class="description" id="equip1">
+        <h3>打野刀</h3>
+        <p>必须携带惩击才可购买，获得灵息惩击效果。</p>
+        <p> 被动—打野：增加60%对野怪的伤害（仅近战英雄生效），击杀野怪获得经验提升30%，击杀野怪获得的金币提升20%。</p>
+        <p>被动—磨砺：击杀野怪增加自身2点物理攻击和0.5%冷却缩减，最多叠加20层。</p>
+        <p>被动—游击：与队友分配小兵收益时，不参与分配，单独获得50%金币与经验。该效果在4分钟时移除，分配时若存在多个游击效果，只一人生效，游走装优先</p>
+    </div>
+
+    <div class="description" id="equip2">
+        <h3>极速战靴</h3>
+        <p>+25%攻击速度
+        </p>
+        <p>
+            唯一被动：+60移速
+        </p>
+    </div>
+
+    <div class="description" id="equip3">
+        <h3>黑切</h3>
+        <p>物理攻击：85点</p>
+        <p> 冷却缩减：15%</p>
+        <p> 最大生命：500点</p>
+        <p>唯一被动 残废：普通攻击有30%几率降低敌人20%移动速度，持续2秒。</p>
+        <p>唯一被动 切割：增加(100+英雄等级*10)点护甲穿透</p>
+    </div>
+
+    <div class="description" id="equip4">
+        <h3>无尽</h3>
+        <p>物理攻击：120点</p>
+        <p> 暴击率：20%</p>
+        <p>
+            唯一被动 ：+50%暴击效果
+        </p>
+    </div>
+    <div class="description" id="equip5">
+        <h3>宗师</h3>
+        <p>物理攻击：60点</p>
+        <p>暴击率：20%</p>
+        <p>最大法力：400点</p>
+        <p>最大生命：400点</p>
+        <p>唯一被动 咒刃：下次攻击造成额外100%物理加成的伤害</p>
+        <p>唯一被动 强击：增加效果——每次使用技能后增加8%移速，持续2秒。（不可叠加）</p>
+    </div>
+
+    <div class="description" id="equip6">
+        <h3>泣血</h3>
+        <p>物理攻击：100点
+            物理吸血：25%</p>
+    </div>
+    <h2>技能介绍</h2>
+    <div class="skills-table">
+        <div class="skill" onclick="showDescription('skill1')">
+            <img src="被动.webp" alt="技能1">
+            <p>杀意之枪</p>
+        </div>
+        <div class="skill" onclick="showDescription('skill2')">
+            <img src="无情冲锋.webp" alt="技能2">
+            <p>无情冲锋</p>
+        </div>
+        <div class="skill" onclick="showDescription('skill3')">
+            <img src="背水一战.webp" alt="技能3">
+            <p>背水一战</p>
+        </div>
+        <div class="skill" onclick="showDescription('skill4')">
+            <img src="国士无双.webp" alt="技能4">
+            <p>国士无双</p>
+        </div>
+    </div>
+
+    <div class="description" id="skill1">
+        <h3>杀意之枪</h3>
+        <p>被动：韩信的第四次普通攻击会将敌人击飞0.5秒；韩信释放技能命中目标后会增加50%攻击速度</p>
+    </div>
+
+    <div class="description" id="skill2">
+        <h3>无情冲锋</h3>
+        <p>韩信持枪向指定目标周围发起冲锋，
+            冲锋会对范围内目标造成300/320/340/360/380/400（+55％物理加成）点物理伤害并将范围内敌人击飞0.8秒；
+            冲锋后5秒内可发动第二次冲锋，但不会击飞敌人</p>
+    </div>
+
+    <div class="description" id="skill3">
+        <h3>背水一战</h3>
+        <p>韩信向后跳跃并使下一次普通攻击变更为横扫攻击，持续3秒，横扫会对范围内敌人造成180/200/220/240/260/280(+100％物理加成）点物理伤害</p>
+    </div>
+
+    <div class="description" id="skill4">
+        <h3>国士无双</h3>
+        <p>韩信朝指定方向乱舞四次长枪，对命中的敌人每次造成250/300/350(+85％物理加成）点物理伤害；最后一次攻击会将范围内的敌人击飞0.5秒；乱舞期间韩信处于霸体状态并获得30%伤害减免</p>
+    </div>
+
+    <h2>台词</h2>
+    <div class="quotes">
+        <p>到达胜利之前，无法回头。</p>
+        <p>不做无法实现的梦。</p>
+        <p>垫背的，怎么都不嫌多。</p>
+    </div>
+</body>
+
+</html>

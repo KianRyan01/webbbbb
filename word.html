@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>结课报告</title>
+    <script>
+        function showDescription(skillId) {
+            var description = document.getElementById(skillId);
+            if (description.style.display === "none") {
+                description.style.display = "block";
+            } else {
+                description.style.display = "none";
+            }
+        }
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</head>
+<body>
+    <button onclick="goBack()">返回</button>
+    <h2>介绍</h2>
+    <p>我做的是王者荣耀相关的信息展示。</p>
+    <p>主页展示的是：S32新赛季王者官方的主页里的新英雄，上面展示了新赛季开始的字样</p>
+    <p>本人主页，展示的是我的游戏的个人主页</p>
+    <p>喜欢的英雄：这里展示的是我喜欢的英雄，背景是才出来的荣耀典藏皮肤，英雄名字和介绍都是文字链接，点击后，</p>
+    <p>会跳转到另一个界面，展示该英雄的推荐出装，装备的介绍，和技能描述，和几句台词</p>
+    <p>kpl明星人物：这里介绍的是在职业比赛里非常出名的职业选手</p>  
+    <h2>开发过程</h2>
+    <p>就是在王者官网找相关的资料，看中某个图片啥的，去代码里面找路径，找到后保存到本地。</p>
+    <p>将每个页面的基本框架搭建好，在在他们上面去写导航栏的操作，实现导航栏导航</p>
+    <p>在装备介绍和技能介绍哪里，去网上找代码，实现，以表格展示，双击装备或技能，下方会显示相关的描述。</p>
+    <h2>遇到的问题</h2>
+    <p>不知道咋实现点击装备或技能能看到相关的描述</p>
+    <p>页面的视频不能占满屏幕</p>
+    <p>加了一个文字图片在主页上面，发现导航栏用不了了</p>
+    <h2>如何解决的</h2>
+    <p>去博客上查找，获取到了相关的方法</p>
+    <p>当时放文字图片放在主页上面时，将其属性z-index设置为1，而导航栏的还是默认值1，我去将它设置为2就能正常使用了</p>
+    <h2>未解决的</h2>
+    <p>当时本来主页做的是以循环播放的视频为背景，但不知道咋解决占满屏幕而不影响其他功能</p>
+    <h2>总结</h2>
+    <p>通过本学期的学习和本次实验，我从一点也不懂前端，到了解了一些HTML知识和CSS知识，与接触了javasc。</p>
+    <p>知道了HTML的骨架</p>
+    <p>学习了，一些CSS的知识，能够通它，去设置一些简单的样式</p>
+    <p>学了一些JavaScript，知道了一些其相关的使用方式和用途</p>
+    <p>也感受到前端的知识学习量也是非常巨大的，像我这种新手，写个简单的页面都花了不少时间，</p>
+    <p>同时也感受到，现在的很多项目的很多人一起团队合作，才能更好的完成</p>
+</body>
+</html>
